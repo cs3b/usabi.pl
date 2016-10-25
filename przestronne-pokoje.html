@@ -1,0 +1,141 @@
+---
+layout: default
+title: Pokoje w Wiśle
+section_id: pokoje
+works:
+  - image: images/@stock/work-1.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: graphic-design
+    desc: Design &amp; Development
+  - image: images/@stock/work-2.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: web-design print
+    desc: Design &amp; Development
+  - image: images/@stock/work-3.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: brand
+    desc: Design &amp; Development
+  - image: images/@stock/work-4.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: development
+    desc: Design &amp; Development
+  - image: images/@stock/work-5.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: print brand
+    desc: Design &amp; Development
+  - image: images/@stock/work-6.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: web-design
+    desc: Design &amp; Development
+  - image: images/@stock/work-7.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: web-design
+    desc: Design &amp; Development
+  - image: images/@stock/work-8.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: graphic-design
+    desc: Design &amp; Development
+  - image: images/@stock/work-1.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: development print
+    desc: Design &amp; Development
+  - image: images/@stock/work-2.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: brand
+    desc: Design &amp; Development
+  - image: images/@stock/work-3.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: web-design
+    desc: Design &amp; Development
+  - image: images/@stock/work-4.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: print
+    desc: Design &amp; Development
+  - image: images/@stock/work-5.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: graphic-design
+    desc: Design &amp; Development
+  - image: images/@stock/work-6.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: development
+    desc: Design &amp; Development
+  - image: images/@stock/work-7.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: print
+    desc: Design &amp; Development
+  - image: images/@stock/work-8.jpg
+    title: Beautiful Girl
+    link_to: portfolio-item.html
+    klass: graphic-design
+    desc: Design &amp; Development
+---
+
+
+<div class='full parallax' style='background-image: url(images/@stock/portfolio-header-bg.jpg); color: #fff;'>
+  <div class='row'>
+    <div class='large-12 columns'>
+      {% include section-header.html title="Pokoje w Wiśle" tagline="Zapraszamy do trzech przestronnych pokoi o wysokim standardzie" color="#fff" class="big" %}
+    </div>
+  </div>
+  <div class='four spacing'></div>
+</div>
+
+
+<div class='full'>
+  <div class='row'>
+    <div class='mod modGallery'>
+      <div class='gallery-nav'>
+        <ul>
+          <li class='current'>
+            <a data-cat='all' href='#'>wszystkie</a>
+          </li>
+          <li>
+            <a data-cat='dwuosobowy-nr1' href='#'>Dwuosobowy (nr. 1)</a>
+          </li>
+          <li>
+            <a data-cat='czterosoobowy-nr2' href='#'>Czteroosobowy (nr. 2)</a>
+          </li>
+          <li>
+            <a data-cat='czteroosobowy-nr3' href='#'>Czteroosobowy (nr. 3)</a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class='gallery large-block-grid-4 medium-block-grid-3 small-block-grid-2'>
+
+        {% for work in page.works %}
+          <li class="{{ work.klass }}">
+            <a href='{{ work.link_to }}'>
+              <img alt="" src="{{ work.image }}" />
+              <div class='overlay'>
+                <div class='thumb-info'>
+                  <h3>{{ work.title }}</h3>
+                  <p>{{ work.desc }}</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+
+      </ul>
+
+    </div>
+  </div>
+
+  <div class='four spacing'></div>
+</div>
