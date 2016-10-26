@@ -1,6 +1,3 @@
-- name: Home
-  path: index.html
-  section_id: home
 - name: Pokoje
   path: przestronne-pokoje.html
   section_id: pokoje
@@ -17,6 +14,3 @@
 - name: Kontakt
   path: napisz_do_nas.html
   section_id: kontakt
-- name: Blog
-  path: blog/
-  section_id: blog
