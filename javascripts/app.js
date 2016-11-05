@@ -382,7 +382,7 @@ jQuery(document).foundation();
           right: "prev"
         },
         pauseOnHover: false
-      }
+      };
 
       var autostop = $('.sequence', $ctx).data('autostop') == 'on' ? true : false;
       var timeout = $('.sequence', $ctx).data('timeout');
@@ -411,7 +411,7 @@ jQuery(document).foundation();
             sequence.startAutoPlay(sequence.settings.autoPlayDelay);
             window.sequenceAutoStarted = true;
           }
-        }
+        };
         setTimeout(removeStatic, 1000);
 
         // when the next frame is the last one
@@ -444,7 +444,7 @@ jQuery(document).foundation();
         } else {
           $('.fullscreen_slideshow', $ctx).height($(window).height() - $('.top-bar').height());
         }
-      }
+      };
 
       fullscreen_slide();
 
@@ -469,7 +469,7 @@ jQuery(document).foundation();
           right: "prev"
         },
         pauseOnHover: false
-      }
+      };
 
       var autostop = jQuery('.fullscreen_slideshow', $ctx).data('autostop') == 'on' ? true : false;
       var timeout = jQuery('.fullscreen_slideshow', $ctx).data('timeout');
@@ -499,7 +499,7 @@ jQuery(document).foundation();
             sequence.startAutoPlay(sequence.settings.autoPlayDelay);
             window.fullSequenceAutoStarted = true;
           }
-        }
+        };
         setTimeout(removeStatic, 1000);
         // when the next frame is the last one
         if ( sequence.nextFrameID == sequence.frames.length && options.autoStop ) {
@@ -688,7 +688,7 @@ jQuery(document).foundation();
               if ($(item).data('masonry-id') == $(this).data('masonry-id')) {
                 skip = true;
               }
-            })
+            });
 
             if ( $(this).hasClass(cat) && !skip) {
               ($('.gallery', $ctx)[0]).appendChild($(this)[0]);
@@ -788,10 +788,13 @@ jQuery(document).foundation();
 
       $('.items', $ctx).slick({
         autoplay: true,
-        pauseOnHover: false,
+        pauseOnHover: true,
         dots: show_dots,
-        speed: 1500,
-        arrows: false
+        speed: 3000,
+        pagination: true,
+        arrows: true,
+        nextButton: true,
+        prevButton: true
       });
 
     }

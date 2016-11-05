@@ -11,6 +11,12 @@
 - name: Masaże i Sauna
   path: masaz_i_sauna_strefa_wellness.html
   section_id: masaz_i_sauna
+- name: Atrakcje
+  path: atrakcje.html
+  section_id: atrakcje
+- name: Opinie
+  path: index.html#opinie
+  section_id: home
 - name: Kontakt
   path: napisz_do_nas.html
   section_id: kontakt
