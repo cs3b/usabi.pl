@@ -1,16 +1,16 @@
 - name: Pokoje
-  path: usabi.pl/przestronne-pokoje.html
+  path: przestronne-pokoje.html
   section_id: pokoje
   children:
     - name: Pokój dwuosobowy (nr. 1)
-      path: usabi.pl/duzy-pokoj-dwu-osobowy.html
+      path: duzy-pokoj-dwu-osobowy.html
     - name: Pokój czteroosobowy (nr. 2)
-      path: usabi.pl/duzy-pokoj-czteroosobowy-1.html
+      path: duzy-pokoj-czteroosobowy-1.html
     - name: Pokój czteroosobowy (nr. 3)
-      path: usabi.pl/duzy-pokoj-czteroosobowy-2.html
+      path: duzy-pokoj-czteroosobowy-2.html
 - name: Masaże i Sauna
-  path: usabi.pl/masaz_i_sauna_strefa_wellness.html
+  path: masaz_i_sauna_strefa_wellness.html
   section_id: masaz_i_sauna
 - name: Kontakt
-  path: usabi.pl/napisz_do_nas.html
+  path: napisz_do_nas.html
   section_id: kontakt
