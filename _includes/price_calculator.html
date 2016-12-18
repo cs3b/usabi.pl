@@ -1,0 +1,155 @@
+<div id="price_calculator">
+    <h3>Wybierz termin pobytu</h3>
+    <ul class='info'>
+    </ul>
+
+    <div class="columns">
+        <div class="small-12 medium-6 column">
+            Data przyjazdu:
+            <input class="span2" id="dpd1" type="text" readonly v-model="startDate">
+        </div>
+        <div class="small-12 medium-6 column">
+            Data wyjazdu:
+            <input class="span2" id="dpd2" type="text" readonly v-model="endDate">
+        </div>
+    </div>
+
+
+    <div class='spacing'></div>
+
+    <div class="columns">
+        <div class="small-7 text-right column" style="padding-top: 10px; height: 48px">
+            <span>cena dla jednej osoby <br/>za jedną dobę</span>
+        </div>
+        <div class="small-5 column">
+                <span class="price-label">
+                {% raw %}
+                      {{ pricePerNightLabel }}
+                {% endraw %}
+                </span>
+        </div>
+    </div>
+
+
+    <div class="columns">
+        <div class='spacing'></div>
+        <small>
+                    <span class="small-12 column text-right">
+                    {% raw %}
+                        całkowity koszt {{ daysStayed }} dobowego pobytu dla {{ numOfPeople }} osób to: <strong>{{ totalPriceLabel }}</strong>
+                    {% endraw %}
+                    </span>
+        </small>
+    </div>
+    <div class="columns">
+        <div class='spacing'></div>
+        <div class="small-12">
+            <h3>Zarezerwuj swój pobyt: <a href="tel:+48500050386">500 050 386</a></h3>
+        </div>
+    </div>
+</div>
+
+<script>
+    jQuery(document).ready(function () {
+        var startDate = dateFns.startOfToday();
+        var checkin = jQuery('#dpd1').fdatepicker({
+            format: 'yyyy-mm-dd',
+            language: 'pl',
+            onRender: function (date) {
+                return date.valueOf() < startDate.valueOf() ? 'disabled' : '';
+            }
+        }).on('changeDate', function (ev) {
+            if (ev.date.valueOf() > checkout.date.valueOf()) {
+                var newDate = new Date(ev.date);
+                newDate.setDate(newDate.getDate() + 1);
+                checkout.update(newDate);
+                priceCalculator.changeEndDate(checkout.date);
+            }
+
+            priceCalculator.changeStartDate(ev.date);
+            checkin.hide();
+            jQuery('#dpd2')[0].focus();
+        }).data('datepicker');
+        var checkout = jQuery('#dpd2').fdatepicker({
+            format: 'yyyy-mm-dd',
+            language: 'pl',
+            onRender: function (date) {
+                return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+            }
+        }).on('changeDate', function (ev) {
+
+            priceCalculator.changeEndDate(ev.date);
+            checkout.hide();
+        }).data('datepicker');
+    });
+</script>
+
+<script>
+    var startDate = dateFns.startOfToday();
+    var endDate = dateFns.addDays(startDate, 4);
+    var formatDate = function (date) {
+        return dateFns.format(date, "YYYY-MM-DD");
+    };
+
+    var priceCalculator = new Vue({
+        el: '#price_calculator',
+        data: {
+            startDate: formatDate(startDate),
+            endDate: formatDate(endDate),
+            numOfPeople: 2,
+            winterPrice: [60, 50, 45],
+            summerPrice: [50, 40, 36]
+        },
+
+        methods: {
+            changeStartDate: function (date) {
+                this.startDate = formatDate(date);
+            },
+            changeEndDate: function (date) {
+                this.endDate = formatDate(date);
+            }
+        },
+
+        computed: {
+            daysStayed: function () {
+                return dateFns.differenceInDays(dateFns.parse(this.endDate), dateFns.parse(this.startDate));
+            },
+
+            seasonPrice: function () {
+                var yday = dateFns.getDayOfYear(dateFns.parse(this.startDate));
+                return (yday >= 365 - 21 || yday <= 60);
+            },
+
+            pricePerNight: function () {
+                var days = this.daysStayed;
+                if (this.seasonPrice) {
+                    if (days == 1) {
+                        return this.winterPrice[0]
+                    } else if (days == 2 || days == 3) {
+                        return this.winterPrice[1]
+                    } else {
+                        return this.winterPrice[2]
+                    }
+                } else {
+                    if (days == 1) {
+                        return this.summerPrice[0]
+                    } else if (days <= 6) {
+                        return this.summerPrice[1]
+                    } else {
+                        return this.summerPrice[2]
+                    }
+                }
+            },
+
+            pricePerNightLabel: function () {
+                return `${this.pricePerNight} zł`;
+            },
+            totalPrice: function () {
+                return this.daysStayed * this.pricePerNight * this.numOfPeople
+            },
+            totalPriceLabel: function () {
+                return `${this.totalPrice} zł`;
+            }
+        }
+    });
+</script>
