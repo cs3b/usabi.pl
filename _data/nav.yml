@@ -6,8 +6,8 @@
       path: duzy-pokoj-dwuosobowy-nr1.html
     - name: Pokój czteroosobowy (nr. 2)
       path: duzy-pokoj-czteroosobowy-nr2.html
-    - name: Pokój czteroosobowy (nr. 3)
-      path: duzy-pokoj-czteroosobowy-nr3.html
+    - name: Pokój pięcioosobowy (nr. 3)
+      path: duzy-pokoj-piecioosobowy-nr3.html
 - name: Masaże i Sauna
   path: masaz_i_sauna_strefa_wellness.html
   section_id: masaz_i_sauna
