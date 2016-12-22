@@ -59,8 +59,10 @@ section_id: pokoje
                 </p>
             </small>
         </div>
+        * 2 osoby -> 60zł za dobę
+        * 3 osoby -> taki cennik jak jest teraz (domyślnie 3 osoby)
         <div class='large-5 columns'>
-            {% include price_calculator.html peopleMin=2 peopleMax=4 %}
+            {% include price_calculator.html peopleMin=2 peopleMax=4 numOfPeople=3 %}
         </div>
     </div>
 </div>
