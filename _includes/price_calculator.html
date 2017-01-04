@@ -43,9 +43,12 @@
     </div>
     <div class="columns">
         <div class='spacing'></div>
-        <div class="small-12">
-            <h3>Zarezerwuj swój pobyt: <a href="tel:+48500050386">500 050 386</a></h3>
-        </div>
+            <div class="small-8 column">
+                <h3>Zarezerwuj swój pobyt:</h3>
+            </div>
+            <div class="small-4 column">
+                <h3><a href="tel:+48500050386">500 050 386</a></h3>
+            </div>
     </div>
 </div>
 
@@ -106,25 +109,25 @@
         },
 
         methods: {
-            changeStartDate: function(date) {
+            changeStartDate: function (date) {
                 this.startDate = formatDate(date);
             },
-            changeEndDate: function(date) {
+            changeEndDate: function (date) {
                 this.endDate = formatDate(date);
             }
         },
 
         computed: {
-            daysStayed: function() {
+            daysStayed: function () {
                 return dateFns.differenceInDays(dateFns.parse(this.endDate), dateFns.parse(this.startDate));
             },
 
-            seasonPrice: function() {
+            seasonPrice: function () {
                 var yday = dateFns.getDayOfYear(dateFns.parse(this.startDate));
                 return (yday >= 365 - 21 || yday <= 60);
             },
 
-            pricePerNight: function() {
+            pricePerNight: function () {
                 var days = this.daysStayed;
                 if (this.seasonPrice) {
                     if (days == 1) {
@@ -145,13 +148,13 @@
                 }
             },
 
-            pricePerNightLabel: function() {
+            pricePerNightLabel: function () {
                 return `${this.pricePerNight} zł`;
             },
-            totalPrice: function() {
+            totalPrice: function () {
                 return this.daysStayed * this.pricePerNight * this.numOfPeople
             },
-            totalPriceLabel: function() {
+            totalPriceLabel: function () {
                 return `${this.totalPrice} zł`;
             }
         }
