@@ -1,6 +1,7 @@
 --- {}
 ---
 ---
+---
 layout: default
 title: About
 section_id: atrakcje
