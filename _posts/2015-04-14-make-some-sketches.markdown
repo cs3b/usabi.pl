@@ -1,6 +1,6 @@
 ---
 title: Make some sketches
-date: '2015-04-14 10:58:12'
+date: 2015-04-14 00:00:00 +0000
 layout: post
 images:
 - images/@stock/blog-3.jpg

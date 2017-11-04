@@ -1,0 +1,287 @@
+---
+pages:
+- przestronne-pokoje.html
+- atrakcje.html
+- masaz_i_sauna_strefa_wellness.html
+- kontakt.html
+- duzy-pokoj-czteroosobowy-nr2.html
+- duzy-pokoj-dwuosobowy-nr1.html
+- duzy-pokoj-piecioosobowy-nr3.html
+- blog/index.html
+- index.html
+hide_body: false
+fields:
+- name: title
+  default: About
+  label: Title
+  type: text
+  hidden: false
+- name: layout
+  default: default
+  label: Layout
+  type: text
+  hidden: false
+- name: section_id
+  default: atrakcje
+  label: Section id
+  type: text
+  hidden: false
+- name: slides
+  default:
+  - bg: images/slider/przestronne_pokoje.jpg
+    small_title:
+      klass: bottom-to-top
+      text: Każdy pokój wyposażony w łazienkę, czajnik, internet Wi-Fi
+    title:
+      klass: bottom-to-top
+      text: Przestronne Pokoje
+    buttons:
+      klass: bottom-to-top
+      items:
+      - text: Zobacz wszystkie 3 pokoje
+        link_to: "/przestronne-pokoje.html"
+  - bg: images/slider/salon_masazu.jpg
+    small_title:
+      klass: bottom-to-top
+      text: indywidualnie dostosowane do twoich potrzeb
+    title:
+      klass: bottom-to-top
+      text: masaże
+    buttons:
+      klass: bottom-to-top
+      items:
+      - text: Dowiedz się więcej
+        link_to: "/masaz_i_sauna_strefa_wellness.html"
+  - bg: images/slider/wisla_pasmo_gorskie_cienkow.jpg
+    small_title:
+      klass: bottom-to-top
+      text: Perła Beskidów czeka właśnie na ciebie!
+    title:
+      klass: bottom-to-top
+      text: Zapraszamy do Wisły
+    buttons:
+      klass: bottom-to-top
+      items:
+      - text: Zobacz inne atrakcje
+        link_to: "/atrakcje.html"
+  label: Slides
+  type: field_group_list
+  fields:
+  - name: bg
+    default: images/slider/przestronne_pokoje.jpg
+    label: Bg
+    type: file
+    hidden: false
+  - name: small_title
+    default: 
+    label: Small title
+    type: field_group
+    fields:
+    - name: klass
+      default: bottom-to-top
+      label: Klass
+      type: text
+      hidden: false
+    - name: text
+      default: Każdy pokój wyposażony w łazienkę, czajnik, internet Wi-Fi
+      label: Text
+      type: text
+      hidden: false
+    hidden: false
+  - name: title
+    default: 
+    label: Title
+    type: field_group
+    fields:
+    - name: klass
+      default: bottom-to-top
+      label: Klass
+      type: text
+      hidden: false
+    - name: text
+      default: Przestronne Pokoje
+      label: Text
+      type: text
+      hidden: false
+    hidden: false
+  - name: buttons
+    default: 
+    label: Buttons
+    type: field_group
+    fields:
+    - name: klass
+      default: bottom-to-top
+      label: Klass
+      type: text
+      hidden: false
+    - name: items
+      default:
+      - text: Zobacz wszystkie 3 pokoje
+        link_to: "/przestronne-pokoje.html"
+      label: Items
+      type: field_group_list
+      fields:
+      - name: text
+        default: Zobacz wszystkie 3 pokoje
+        label: Text
+        type: text
+        hidden: false
+      - name: link_to
+        default: "/przestronne-pokoje.html"
+        label: Link to
+        type: text
+        hidden: false
+      hidden: false
+    hidden: false
+  hidden: false
+- name: testimonials
+  default:
+  - quote:
+    - Po kilku latach trafiliśmy znowu do Wisły i wybór co do kwatery padł ponownie
+      na Willę u Sabi.
+    - 'Wszystko było super: pokoje, atmosfera i super masaże które profesjonalnie
+      wykonuje p.Paweł.'
+    - Wszystkim, którzy cenią kulturę w obyciu, spokój i chcą zadbać o zdrowie przez
+      profesjonalny masaż gorąco polecam.
+    author: Adam, Irmina i Patryk
+    date: Zima 2016
+  - quote:
+    - Kilkudniowy pobyt w Willi u Sabi w Wiśle wspominamy bardzo sympatycznie.
+    - Niewątpliwie atutem tego miejsca jest możliwośc skorzystania z masaży wykonywanych
+      profesjonalnie przez Pana Pawła.
+    - Serdecznie polecamy:).
+    author: MSM
+    date: Jesień 2015
+  - quote:
+    - Willa U Sabi to idealne miejsce dla osób które chcą odpocząć.
+    - Odległość ok. 6 km od centrum nie stanowi żadnej przeszkody - spokój, cisza
+      i piękna okolica.
+    - Pokoje bardzo przestronne i zadbane. Możliwość grillowania i relaksu w dostępnej
+      altance. Właściciele bardzo kulturalni i sympatyczni.
+    - W przeciągu miesiąca byłam dwa razy i zapewne to miejsce pozostanie na czołowej
+      liście noclegów w Wiśle. Gorąco polecam.
+    author: Kasia
+    date: Lato 2015
+  - quote:
+    - Witam. Pobyt choć krótki, ale wspaniały, idealne miejsce na odpoczynek i relax.
+    - Dosłownie parę minut autem od dobrych stoków narciarskich i nie tylko.
+    - Wspaniali właściciele, idealne pokoje, znakomity masaż:). Pozdrawiam Rafał z
+      mamą.
+    author: Rafał z mamą
+    date: Zima 2015
+  label: Testimonials
+  type: field_group_list
+  fields:
+  - name: quote
+    default:
+    - Po kilku latach trafiliśmy znowu do Wisły i wybór co do kwatery padł ponownie
+      na Willę u Sabi.
+    - 'Wszystko było super: pokoje, atmosfera i super masaże które profesjonalnie
+      wykonuje p.Paweł.'
+    - Wszystkim, którzy cenią kulturę w obyciu, spokój i chcą zadbać o zdrowie przez
+      profesjonalny masaż gorąco polecam.
+    label: Quote
+    type: list
+    hidden: false
+  - name: author
+    default: Adam, Irmina i Patryk
+    label: Author
+    type: text
+    hidden: false
+  - name: date
+    default: Zima 2016
+    label: Date
+    type: text
+    hidden: false
+  hidden: false
+- name: works
+  default:
+  - image: images/duzy-pokoj-piecioosobowy-nr3/01.jpg
+    title: 
+    link_to: "/duzy-pokoj-piecioosobowy-nr3.html"
+    klass: duzy-pokoj-piecioosobowy-nr3
+    desc: 
+  - image: images/duzy-pokoj-czteroosobowy-nr2/01.jpg
+    title: 
+    link_to: "/duzy-pokoj-czteroosobowy-nr2.html"
+    klass: duzy-pokoj-czteroosobowy-nr2
+    desc: 
+  - image: images/duzy-pokoj-dwuosobowy-nr1/01.jpg
+    title: 
+    link_to: "/duzy-pokoj-dwuosobowy-nr1.html"
+    klass: duzy-pokoj-dwuosobwy-nr1
+    desc: 
+  - image: images/duzy-pokoj-piecioosobowy-nr3/02.jpg
+    title: 
+    link_to: "/duzy-pokoj-piecioosobowy-nr3.html"
+    klass: duzy-pokoj-piecioosobowy-nr3
+    desc: 
+  - image: images/duzy-pokoj-czteroosobowy-nr2/02.jpg
+    title: 
+    link_to: "/duzy-pokoj-czteroosobowy-nr2.html"
+    klass: duzy-pokoj-czteroosobowy-nr2
+    desc: 
+  - image: images/duzy-pokoj-czteroosobowy-nr2/03.jpg
+    title: 
+    link_to: "/duzy-pokoj-czteroosobowy-nr2.html"
+    klass: duzy-pokoj-czteroosobowy-nr2
+    desc: 
+  - image: images/duzy-pokoj-czteroosobowy-nr2/04.jpg
+    title: 
+    link_to: "/duzy-pokoj-czteroosobowy-nr2.html"
+    klass: duzy-pokoj-czteroosobowy-nr2
+    desc: 
+  - image: images/duzy-pokoj-dwuosobowy-nr1/02.jpg
+    title: 
+    link_to: "/duzy-pokoj-dwuosobowy-1.html"
+    klass: duzy-pokoj-dwuosobwy-nr1
+    desc: 
+  - image: images/duzy-pokoj-piecioosobowy-nr3/05.jpg
+    title: 
+    link_to: "/duzy-pokoj-piecioosobowy-nr3.html"
+    klass: duzy-pokoj-piecioosobowy-nr3
+    desc: 
+  - image: images/duzy-pokoj-czteroosobowy-nr2/05.jpg
+    title: 
+    link_to: "/duzy-pokoj-czteroosobowy-nr2.html"
+    klass: duzy-pokoj-czteroosobowy-nr2
+    desc: 
+  - image: images/duzy-pokoj-piecioosobowy-nr3/04.jpg
+    title: 
+    link_to: "/duzy-pokoj-piecioosobowy-nr3.html"
+    klass: duzy-pokoj-piecioosobowy-nr3
+    desc: 
+  - image: images/duzy-pokoj-czteroosobowy-nr2/06.jpg
+    title: 
+    link_to: "/duzy-pokoj-czteroosobowy-nr2.html"
+    klass: duzy-pokoj-czteroosobowy-nr2
+    desc: 
+  label: Works
+  type: field_group_list
+  fields:
+  - name: image
+    default: images/duzy-pokoj-piecioosobowy-nr3/01.jpg
+    label: Image
+    type: file
+    hidden: false
+  - name: title
+    default: 
+    label: Title
+    type: text
+    hidden: false
+  - name: link_to
+    default: "/duzy-pokoj-piecioosobowy-nr3.html"
+    label: Link to
+    type: text
+    hidden: false
+  - name: klass
+    default: duzy-pokoj-piecioosobowy-nr3
+    label: Klass
+    type: text
+    hidden: false
+  - name: desc
+    default: 
+    label: Desc
+    type: text
+    hidden: false
+  hidden: false

@@ -1,0 +1,9 @@
+---
+upload_path: "/images/forestryio"
+frontmatter_file_url_template: "/images/forestryio"
+body_file_url_template: "{{ site.baseurl }}/forestryio/images"
+new_page_extension: md
+auto_deploy: true
+admin_path: ''
+webhook_url: 
+collections: 

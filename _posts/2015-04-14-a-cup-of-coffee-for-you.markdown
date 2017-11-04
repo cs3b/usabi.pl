@@ -1,6 +1,6 @@
 ---
 title: A cup of coffee for you
-date: '2015-04-14 10:57:12'
+date: 2015-04-14 00:00:00 +0000
 layout: post
 images: images/@stock/blog-2.jpg
 excerpt: Iste neque doloribus dolor quis ad sit dolores dolor sit perferendis. nemo

@@ -1,6 +1,6 @@
 ---
 title: Look what we have done
-date: '2015-04-14 10:52:12'
+date: 2015-04-14 00:00:00 +0000
 layout: post
 images: images/@stock/blog-1.jpg
 excerpt: Iste neque doloribus dolor quis ad sit dolores dolor sit perferendis. nemo
