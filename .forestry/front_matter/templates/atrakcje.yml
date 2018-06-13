@@ -1,15 +1,6 @@
 ---
-pages:
-- masaz_i_sauna_strefa_wellness.html
-- duzy-pokoj-piecioosobowy-nr3.html
-- przestronne-pokoje.html
-- duzy-pokoj-czteroosobowy-nr2.html
-- duzy-pokoj-dwuosobowy-nr1.html
-- index.html
-- atrakcje.html
-- kontakt.html
-- blog/index.html
 hide_body: false
+is_partial: false
 fields:
 - name: title
   default: About
@@ -285,3 +276,13 @@ fields:
     type: text
     hidden: false
   hidden: false
+pages:
+- _pages/masaz_i_sauna_strefa_wellness.html
+- _pages/duzy-pokoj-piecioosobowy-nr3.html
+- _pages/przestronne-pokoje.html
+- _pages/duzy-pokoj-czteroosobowy-nr2.html
+- _pages/duzy-pokoj-dwuosobowy-nr1.html
+- _pages/index.html
+- _pages/atrakcje.html
+- _pages/kontakt.html
+- _pages/blog/index.html
