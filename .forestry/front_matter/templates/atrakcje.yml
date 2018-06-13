@@ -277,6 +277,7 @@ fields:
     hidden: false
   hidden: false
 pages:
+- _pages/kontakt.html
 - _pages/masaz_i_sauna_strefa_wellness.html
 - _pages/duzy-pokoj-piecioosobowy-nr3.html
 - _pages/przestronne-pokoje.html
@@ -284,5 +285,4 @@ pages:
 - _pages/duzy-pokoj-dwuosobowy-nr1.html
 - _pages/index.html
 - _pages/atrakcje.html
-- _pages/kontakt.html
 - _pages/blog/index.html
