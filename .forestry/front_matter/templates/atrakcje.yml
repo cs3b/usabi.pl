@@ -277,11 +277,11 @@ fields:
     hidden: false
   hidden: false
 pages:
+- _pages/przestronne-pokoje.html
 - _pages/atrakcje.html
 - _pages/kontakt.html
 - _pages/masaz_i_sauna_strefa_wellness.html
 - _pages/duzy-pokoj-piecioosobowy-nr3.html
-- _pages/przestronne-pokoje.html
 - _pages/duzy-pokoj-czteroosobowy-nr2.html
 - _pages/duzy-pokoj-dwuosobowy-nr1.html
 - _pages/index.html
