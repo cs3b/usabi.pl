@@ -1,6 +1,6 @@
 ---
+label: Atrakcje
 hide_body: false
-is_partial: false
 fields:
 - name: title
   default: About
@@ -277,11 +277,11 @@ fields:
     hidden: false
   hidden: false
 pages:
-- duzy-pokoj-piecioosobowy-nr3.html
-- masaz_i_sauna_strefa_wellness.html
-- przestronne-pokoje.html
 - atrakcje.html
 - duzy-pokoj-czteroosobowy-nr2.html
-- kontakt.html
 - duzy-pokoj-dwuosobowy-nr1.html
+- duzy-pokoj-piecioosobowy-nr3.html
 - index.html
+- kontakt.html
+- masaz_i_sauna_strefa_wellness.html
+- przestronne-pokoje.html
